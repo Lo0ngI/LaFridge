@@ -1,0 +1,4 @@
+ID,Food Item,Confidence,Timestamp,Image Path
+61,black beans,0.8979526162147522,2025-05-26 09:14:47,detections/black beans_20250526_091447.jpg
+62,milk,0.609369695186615,2025-05-26 09:17:00,detections/milk_20250526_091700.jpg
+63,milk,0.5835464000701904,2025-05-26 09:17:07,detections/milk_20250526_091707.jpg

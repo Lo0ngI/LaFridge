@@ -1,0 +1,8 @@
+ultralytics
+opencv-python
+pillow
+numpy
+google-generativeai
+pyttsx3
+SpeechRecognition
+PyAudio
