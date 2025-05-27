@@ -20,7 +20,7 @@ class FoodDetectionApp:
         self.root.geometry("700x800")
         self.root.minsize(700, 800)
 
-        self.model = YOLO("best.pt")
+        self.model = YOLO("best_new.pt")
         self.is_webcam_running = False
         self.cap = None
         self.last_save_time = 0
@@ -169,7 +169,7 @@ class FoodDetectionApp:
             # Adjust for ambient noise and listen
             self.recognizer.adjust_for_ambient_noise(source)
             try:
-                audio = self.recognizer.listen(source, timeout=5, phrase_time_limit=20)
+                audio = self.recognizer.listen(source, timeout=2, phrase_time_limit=20)
                 query = self.recognizer.recognize_google(audio)
                 self.chat_display.config(state='normal')
                 self.chat_display.insert(tk.END, f"Voice Command: {query}\n")
@@ -260,7 +260,7 @@ class FoodDetectionApp:
         {db_summary}
 
         Please answer the following query based on this data: {query}
-        If asked to suggest a dish, include a simple recipe with ingredients from the database and mention that the user can remove used ingredients by saying 'remove [ing1, ing2, ...]'. Don't write any special symbols in your answers
+        If asked to suggest a dish, include a simple recipe with ingredients from the database and mention that the user can remove used ingredients by saying 'remove [ing1, ing2, ...]'. Don't write any special symbols in your answers.
         """
 
         try:
